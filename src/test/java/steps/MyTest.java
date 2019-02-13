@@ -3,6 +3,9 @@ package steps;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import utilities.Driver;
 
 public class MyTest {
 
@@ -25,17 +28,18 @@ public class MyTest {
 
     @When("user logs in")
     public void user_logs_in() {
-        System.out.println("User trying to log in");
+        Driver.getDriver().get("http://google.com");
     }
 
     @Then("user passes credentials")
     public void user_passes_credentials() {
-        System.out.println("User passing the credentials");
+        Driver.getDriver().findElement(By.name("q")).sendKeys("apple" + Keys.ENTER);
     }
 
     @Then("user checks")
     public void user_checks() {
-        System.out.println("User is checking login functionality");
+        String title = Driver.getDriver().getTitle();
+        Assert.assertTrue(title.contains("apple"));
     }
 
 }
