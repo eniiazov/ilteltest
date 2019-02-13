@@ -9,10 +9,11 @@ import org.junit.runner.RunWith;
         plugin = "html:target/cucumber",
         features = "src/test/resources/features",
         glue = "steps",
-        tags = "@test",
+        tags = "@smoke",
         dryRun = false
 )
 public class Runner {
 
+    
 
 }

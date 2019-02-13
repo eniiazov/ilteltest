@@ -14,12 +14,28 @@ public class MyTest {
     @Then("user gets")
     public void user_gets() {
         System.out.println("Second step here");
-        Assert.fail("I am just failing to test");
+
     }
 
     @Then("user adds new step")
     public void user_adds_new_step() {
+
         System.out.println("last step here");
+    }
+
+    @When("user logs in")
+    public void user_logs_in() {
+        System.out.println("User trying to log in");
+    }
+
+    @Then("user passes credentials")
+    public void user_passes_credentials() {
+        System.out.println("User passing the credentials");
+    }
+
+    @Then("user checks")
+    public void user_checks() {
+        System.out.println("User is checking login functionality");
     }
 
 }

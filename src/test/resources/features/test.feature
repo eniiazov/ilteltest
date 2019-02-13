@@ -1,6 +1,6 @@
 Feature: Testing
 
-  @test
+  @test @smoke
   Scenario: This is scenario
     When user tests
     Then user gets
