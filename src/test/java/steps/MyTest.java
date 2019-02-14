@@ -24,6 +24,7 @@ public class MyTest {
     public void user_adds_new_step() {
 
         System.out.println("last step here");
+        Assert.fail("On purpose failure");
     }
 
     @When("user logs in")
